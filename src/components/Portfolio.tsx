@@ -49,7 +49,7 @@ const Portfolio = () => {
     {
       title: "Fiction Mech",
       type: "In-house Project",
-      platform: "VR",
+      platform: "Mobile/MR",
       technologies: ["Unity3D", "C#", "OpenXR", "Agora SDK", "Photon 2"],
       description: "Multiplayer VR experience with voice communication.",
     },
