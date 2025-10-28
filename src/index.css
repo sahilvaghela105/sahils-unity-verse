@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 26% 14%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 18%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 20% 18%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 45 93% 58%;
+    --primary-foreground: 220 26% 14%;
+
+    --secondary: 220 16% 22%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 16% 22%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 45 93% 58%;
+    --accent-foreground: 220 26% 14%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 16% 25%;
+    --input: 220 16% 25%;
+    --ring: 45 93% 58%;
+
+    --radius: 0.75rem;
+
+    /* Portfolio-specific tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(220 26% 14%) 0%, hsl(220 20% 18%) 100%);
+    --card-gradient: linear-gradient(135deg, hsl(220 20% 18%) 0%, hsl(220 16% 22%) 100%);
+    --accent-glow: 0 0 40px hsla(45, 93%, 58%, 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section {
+    @apply scroll-mt-20;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-20;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20;
+  }
+
+  .accent-line {
+    @apply w-16 h-1 bg-primary rounded-full;
+  }
+}
